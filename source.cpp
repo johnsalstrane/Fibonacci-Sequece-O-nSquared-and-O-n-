@@ -3,7 +3,7 @@
 //  The second will run On  by storing the results of previous calls into an array, to eliminate reduntant calculations.
 
 #include <stdio.h>
-
+#include <cstdlib>
 
 int FabinocciSequenceOnSquared(int value)
 {
@@ -20,12 +20,13 @@ unsigned long long int FabinocciSequenceOn(const int value, unsigned long long i
     return(array[value]);
 }
 
-int main(void)
+int main(int argc, char *argv[])
 {
     unsigned long long int array[100] = {};
     unsigned long long int result;
+    int num = atoi(argv[1]);
 
-    for (int i = 0; i < 60; i++)
+    for (int i = 0; i < num; i++)
     {
         result = FabinocciSequenceOn(i, array);
         printf("%llu\n", result);
