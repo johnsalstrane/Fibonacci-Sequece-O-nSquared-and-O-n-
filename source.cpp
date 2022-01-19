@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
     for (int i = 0; i < num; i++)
     {
         result = FabinocciSequenceOn(i, array);
-        printf("%llu\n", result);
+        printf("%d: %llu\n", i+1, result);
     }
 
     return(0);
